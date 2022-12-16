@@ -24,7 +24,12 @@ Consumir uma API pública do Spotify pelo nodejs
 
     npm install
 
-3° - Por fim, entre em http://localhost:8888
+
+3° - Depois, digite o comando:
+
+    node app.js
+
+4° - Por fim, entre em http://localhost:8888
 
 
 
