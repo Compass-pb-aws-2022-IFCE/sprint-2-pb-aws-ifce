@@ -1,0 +1,25 @@
+{
+  "name": "sprint-2-pb-aws-ifce",
+  "version": "1.0.0",
+  "description": "Avaliação da segunda sprint do programa de bolsas Compass.uol para formação em machine learning para AWS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
