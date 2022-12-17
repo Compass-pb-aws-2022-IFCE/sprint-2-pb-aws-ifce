@@ -1,0 +1,37 @@
+{
+  "name": "summoner-finder",
+  "version": "1.0.0",
+  "description": "Aplicação que permite pesquisar por summoners/usuários no jogo League of Legends",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce.git"
+  },
+  "keywords": [
+    "league",
+    "of",
+    "legends",
+    "lol",
+    "summoner",
+    "search"
+  ],
+  "author": "Dayanne Bugarim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce#readme",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
