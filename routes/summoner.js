@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
 
     const { tier, rank, wins, losses, queueType } = responseRanked.data[0] ? responseRanked.data[0] : responseRanked.data[1];
 
-    const summoner = res.json({
+    const summoner = {
         name,
         summonerLevel,
         tier,
@@ -51,22 +51,9 @@ router.get('/', async (req, res) => {
         queueType,
         iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
         winrate: ((wins / (wins + losses)) * 100).toFixed(1)
-    })
-
-    // console.log(res.json({
-    //     summonerLevel,
-    //     tier,
-    //     rank,
-    //     wins,
-    //     losses,
-    //     queueType,
-    //     iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
-    //     winrate: ((wins / (wins + losses)) * 100).toFixed(1)
-    // }))
+    }
     
-    // res.render('summoner', { summoner })
-
-    return summoner;
+    res.render('summoner', { summoner })
 })
 
 module.exports = router;
