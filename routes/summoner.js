@@ -2,17 +2,20 @@ const express = require('express');
 const router  = express.Router();
 const axios = require('axios');
 
-function nameFormat (name) {
-    const lowerCaseName = name.toLowerCase();
-    const nameArr = lowerCaseName.split(' ')
-    let formatedName;
-
-    for(let i = 0; i < nameArr.length; i++) {
-        formatedName += nameArr[i];
-    }
-
-    return formatedName;
-    
+const checkQueueType = (type) => {
+    switch (type) {
+        case 'RANKED_SOLO_5x5':
+            return 'Solo/Duo';
+            break;
+        case 'RANKED_FLEX_SR' || 'RANKED_TEAM_SR' :
+            return 'Flex';
+            break;
+        case 'RANKED_TFT_DOUBLE_UP':
+            return 'TFT'
+            break;
+        default:
+            return 'Sem Dados';
+    };
 }
 
 router.get('/', async (req, res) => {
@@ -23,11 +26,11 @@ router.get('/', async (req, res) => {
 
     const urlGetSummoner = `${process.env.LOL_URL}/lol/summoner/v4/summoners/by-name/${summonerName}`;
 
-    const config = { headers: { 'X-Riot-Token': process.env.LOL_KEY }}
+    const config = { headers: { 'X-Riot-Token': process.env.LOL_KEY }};
 
     const summonerIdResponse = await axios.get(urlGetSummoner, config)
     .catch(err => {
-        return res.status(err.response.status).json(err.responses.data);
+        return err;
     })
 
     const { id, name, profileIconId, summonerLevel} = summonerIdResponse.data;
@@ -36,10 +39,12 @@ router.get('/', async (req, res) => {
 
     const responseRanked = await axios.get(urlGetRanked, config)
     .catch(err => {
-        return res.status(err.response.status).json(err.responses.data);
+        return err;
     })
 
     const { tier, rank, wins, losses, queueType } = responseRanked.data[0] ? responseRanked.data[0] : responseRanked.data[1];
+
+    const formattedQueueType = checkQueueType(queueType);
 
     const summoner = {
         name,
@@ -48,12 +53,12 @@ router.get('/', async (req, res) => {
         rank,
         wins,
         losses,
-        queueType,
+        formattedQueueType,
         iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
-        winrate: ((wins / (wins + losses)) * 100).toFixed(1)
-    }
+        winRate: ((wins / (wins + losses)) * 100).toFixed(1)
+    };
     
-    res.render('summoner', { summoner })
+    res.render('summoner', { summoner });
 })
 
 module.exports = router;

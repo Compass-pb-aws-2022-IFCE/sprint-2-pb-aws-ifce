@@ -7,7 +7,7 @@ require('dotenv').config();
 const port = 3333;
 
 app.listen(port, () => {
-    console.log(`Rodando em http://localhost:3333`);
+    console.log(`Rodando em http://localhost:${port}`);
 });
 
 app.set('views', path.join(__dirname, 'views'));

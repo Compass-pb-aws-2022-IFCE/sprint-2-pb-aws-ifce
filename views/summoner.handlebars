@@ -1,15 +1,28 @@
 <main>
     <div class="card">
-        <div class="summoner-main-informations">
-            <img class="summoner-icon" src="{{{ summoner.iconUrl }}}" alt="">
-            <div>
-                <h2>
-                    {{{ summoner.name }}}
-                </h2>
-                <h5>{{{ summoner.summonerLevel }}}</h5>
+        <img class="summoner-icon" src="{{{ summoner.iconUrl }}}" alt="">
+        <div class="summoner-informations">
+            <div class="summoner-main-informations">
+                <div class="summoner-name-level">
+                    <h2>
+                        {{{ summoner.name }}} ({{{ summoner.summonerLevel }}})
+                    </h2>
+                </div>
+            </div>
+            <div class="summoner-rank-informations">
+                <p>{{{ summoner.formattedQueueType }}}: {{{ summoner.tier }}} {{{ summoner.rank }}}</p>
+            </div>
+            <div class="win-losse-informations">
+                <div>
+                    <div class="progress-info">
+                        <span class="win-lose">{{{ summoner.wins }}}V {{{ summoner.losses }}}D</span>
+                        <span class="win-percent">{{{ summoner.winRate }}}%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="inner-progress-bar" style="width: {{{ summoner.winRate }}}%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p>{{{ summoner.tier }}} {{{ summoner.rank }}}</p>
-        <button>Ver partidas</button>
     </div>
 </main>

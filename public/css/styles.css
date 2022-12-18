@@ -24,7 +24,6 @@ header {
 
 #search-form {
     position: relative;
-    /* border: 1px solid red; */
 }
 
 #summoner-search {
@@ -44,10 +43,8 @@ header {
     width: 40px;
     border-radius: 5px;
     background-color: transparent;
-    /*border-bottom: 2px solid #756CDF;*/
     position: absolute;
     right: 0;
-    /* border: 1px solid red; */
 }
 
 #search-icon {
@@ -55,17 +52,79 @@ header {
 }
 
 .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-width: 320px;
+    max-width: 450px;
     background-color: #161B22;
     border-radius: 5px;
-    padding: 0.8rem;
+    padding: 1.15rem 1rem;
     box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.15);
 }
 
 .summoner-main-informations {
     display: flex;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .summoner-icon {
-    max-width: 20%;
+    border: 2px solid #756CDF;
+    max-height: 120px;
     border-radius: 50%;
+}
+
+.summoner-informations {
+    text-align: center;
+}
+
+.summoner-name-level {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.summoner-rank-informations {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.win-losse-informations {
+    width: 100%;
+}
+
+.win-lose {
+    font-weight: 600;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.win-percent {
+    font-weight: 600;
+    color: #756CDF;
+    font-size: 0.9rem;
+}
+
+.progress-bar-container {
+    height: 5px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.inner-progress-bar {
+    height: 5px;
+    background-color: #756CDF;
+    border-right: 2px solid #161B22;
+    border-radius: 50px 0px 0px 50px;
 }
