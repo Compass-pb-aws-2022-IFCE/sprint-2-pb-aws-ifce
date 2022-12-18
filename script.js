@@ -1,16 +1,22 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
 const axios = require("axios");
-const PORT = 8000;
+const PORT = 8001;
 
+// Porta de comunicação com o localhost
+app.listen(PORT, function() {
+   console.log(`O APP está rodando na porta ${PORT}`)
+});
+
+// Rota principal
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 });
 
-// Porta de comunicação com o localhost
-app.listen(PORT)
+// Rotas secundárias
 
 app.get('/MortySmith', async(req, res) => {
+   // O axios retorna uma response e atribuimos-a ao data que é a response já transformada em json
    const {data} = await axios("https://rickandmortyapi.com/api/character/2")
    res.write(`
    <div> Nome: ${data.name} </div>
@@ -18,9 +24,9 @@ app.get('/MortySmith', async(req, res) => {
    <div> Especie: ${data.species} </div>
    <div> Genero: ${data.gender} </div>
    <img src= ${data.image}></img>`)
-   console.log(data)
+   console.log(data);
    res.end();
-})
+});
 
 app.get('/RickSanchez', async(req, res) => {
     const {data} = await axios("https://rickandmortyapi.com/api/character/1")
