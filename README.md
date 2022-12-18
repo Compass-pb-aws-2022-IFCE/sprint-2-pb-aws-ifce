@@ -7,7 +7,7 @@ O projeto a seguir foi desenvolvendo utilizando os conhecimentos adquiridos dura
 - [Documentação API Rick and Morty](https://rickandmortyapi.com/documentation/)
 
 ## Passos
-Após ter instalado o Noje.js através do link acima, para inicar o projeto foi utilizado o o seguinte comando, gerando o package.json
+Após ter instalado o Noje.js através do link acima, para inicar o projeto foi utilizado o seguinte comando, gerando o package.json
 ```
 npm init 
 ```
