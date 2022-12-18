@@ -23,7 +23,22 @@ Na API utilizada é necessário criar uma conta na plataforma para que seja poss
 3. Após feito o login, você será redirecionado para a página de dashboard, onde é possível ver ou gerar uma nova chave. Para gerar uma nova chave utilize o botão *"Regenerate Api Key"*. Você pode ver o código ao clicar em *"Show"* e/ou copiá-lo com o botão *"Copy"*.
 ![](./public/assets/readme/captura-3.png)
 
-## Estrutura da aplicação
+
+## Como utilizar
+1. Utilize o comando abaixo para instalar todas as dependências do projeto:
+```
+npm install
+```
+
+2. Agora utilize esse comando para iniciar o servidor com o nodemon:
+```
+npm run dev
+```
+3. Abra http://localhost:3333 no navegador e agora deve ser possível pesquisar por summoners :)
+
+**Obs.:** 🚨 Cada chave de API após ser gerada tem um prazo de cerca de 24h para expirar, portanto confira a validade da sua em caso de erro ao tentar realizar pesquisas.
+
+## Estrutura do código
 Após criado o diretório do projeto, o seguinte comando foi utilizado para adicionar o arquivo *package.json*.
 ```
 npm init
@@ -237,17 +252,3 @@ Template HTML que irá renderizar as informações recebidas pelas requisições
     ...
 </main>
 ```
-
-## Como utilizar
-1. Utilize o comando abaixo para instalar todas as dependências do projeto:
-```
-npm install
-```
-
-2. Agora utilize esse comando para iniciar o servidor com o nodemon:
-```
-npm run dev
-```
-3. Abra http://localhost:3333 no navegador e agora deve ser possível pesquisar por summoners :)
-
-**Obs.:** 🚨 Cada chave de API após ser gerada tem um prazo de cerca de 24h para expirar, portanto confira a validade da sua em caso de erro ao tentar realizar pesquisas.
