@@ -1,20 +1,24 @@
-# Avaliação Sprint 2 - Programa de Bolsas Compass.uol / AWS e IFCE
+<p align="center">
+  <a href="https://imgur.com/auEAm8r"><img src="https://i.imgur.com/auEAm8r.png" title="source: imgur.com" /></a>
+</p>
 
-Avaliação da segunda sprint do programa de bolsas Compass.uol para formação em machine learning para AWS.
+<b><i> 
+  # Avaliação Sprint 2 - Pesquisa de users do GitHub
+</i></b>
 
----
+## Tecnologias utilizadas:
+- JavaScript
+- Node
+- Express
+- Axios
+- Api GitHub
 
-## Execução
-- Escolher uma API pública (https://any-api.com/, ou qualquer outra, e **deve ser diferente dos demais colegas**);
-- Consumir essa API através do nodejs (recomendado uso de docker, se possível);
-- Criar uma página html para fazer consultas pela API (pode ser bem simples, o layout não será avaliado).
+## Como funciona:
+A aplicação faz pesquisa de todos os usuários do GitHub por meio do campo de pesquisa do próprio navegador, basta escolher o nome desejado e alterar a URL, se o usuário for valido no sistema a API será consultada e os dados serão apresentados na sua tela as seguintes informações: nome, localização, foto de perfil, bio, followers e following.
 
-## Entrega
-- Aceitar o convite do repositório da sprint-2-pb-aws-ifce;
-- Criar uma branch no repositório com o formato nome-sobrenome (Exemplo: daniel-muller);
-- **Conferir se a API desejada já não foi escolhida por algum colega**;
-- Subir o trabalho na branch com um readme.md, documentando detalhes sobre como a avaliação foi desenvolvida, dificuldades conhecidas e como utilizar o sistema;
-- O prazo de entrega é até às 12h do dia 19/12/2022 no repositório do github (https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce).
-
----
----
+## Como executar:
+1. Execute o terminal na pasta da aplicação.
+2. Com o terminal aberto, digite o segundo comando: `npm start`
+3. A sua aplicação já esta rodando! Tudo que precisamos fazer é acessar o navegador com o localhost designado.
+4. Nesse caso, foi usado o localhost:8080
+5. Finalizando, é só digitar a seguinte URL e escolher o nome do user `http://localhost:8080/PesquisandoPerfil/GitHub/user`
