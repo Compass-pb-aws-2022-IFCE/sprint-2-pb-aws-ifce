@@ -153,4 +153,4 @@ Na imagem a seguir é apresentada a página em que os dados são exibidos:
 
 ![API](https://user-images.githubusercontent.com/103959633/208310594-2160dceb-6c0a-445c-8eb5-5f2d7fd17f74.jpg)
 
-A página pode ser exibida tanto utilizando o arquivo **_index.html_** ou pelo endereço **_localhost:3005_**
+A página pode ser exibida tanto utilizando o arquivo **_index.html_**.
