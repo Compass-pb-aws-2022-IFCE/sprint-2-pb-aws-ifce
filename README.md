@@ -14,16 +14,19 @@ Comsumo de uma API pública, fazendo o uso do nodejs e criar uma página html pa
 
 ## Desenvolvimento
 
-A API escolhida para o desenvolvimento da atividade foi uma aplicação de apresenta a cotação do Real (BRL) em relação as moedas Dólar (USD), Euro (EUR) e Bitcoin (BTC). O resultado fo apresentado em uma página html ou pode ser visualizado pela porta _localhost:3005_.
+A API escolhida para o desenvolvimento da atividade foi uma aplicação que apresenta a cotação do Real (BRL) em relação as moedas Dólar (USD), Euro (EUR) e Bitcoin (BTC). O resultado fo apresentado em uma página html ou pode ser visualizado pela porta _localhost:3005_.
 
-Primeiramente, para constru a base para o desenvolvimento da aplicação, foi realizada a criação da pasta onde ficaram todos os arquivos criados, é importante que todos estejam localizados na mesma pasta. 
+Primeiramente, para construir a base para o desenvolvimento da aplicação, foi realizada a criação da pasta onde ficarçao os arquivos criados para o projeto, é importante que todos estejam localizados na mesma pasta. 
 
 Utilizando o terminal do VS code, foi implementado o comando **_npm init_** , o qual inicia a criação do pacote json, onde ficam localizados as informações sobre o projeto como nome, versão, licensa e as bibliotecas utilizadas. 
 
 Para instalar as bibliotecas utilizadas no projeto foi utilizado o comando npm install **<aplicação>**.
 Algumas das bibliotecas utilizadas para o projeto foram: o framework **_express_** que permite gerenciar as requisições de diferentes verbos do HTTP, a **_express-handlebars_** que compila o template como um parâmetro e retorna uma função JavaScrip, a biblioteca **_axios_** que permite a integração do projeto com a API escolhida, a **_nodemon_** que permite que o servidor reinicie automaticamente, a biblioteca **_fs_** que fornece operações de I/O (Input/Output ou E/S, Entrada/Saída), e a biblioteca **_request_** que permite a troca de informações entre servidores.
 
-**Chamando os modulos**
+
+Nessa etapa é feita a criação do arquivo **_api.js_** e **_index.html_**, no arquivo api.js é onde ficará o código principal. Abaixo é apresentado a primeria parte dos comandos, a requisição das bibliotacas que serão utilizadas.
+
+**Chamando os modulos/bibliotecas no programa**
 ```sh
 {
 const request = require('request');
@@ -37,8 +40,7 @@ const fs = require('fs');
 Com todas as bibliotecas já instaladas, o arquivo _package.json_ devidamente criado e configurado, partimos para a criação do servidor.
 
 ### Contruindo servidor
-
-Nessa etapa é feita a criação do arquivo **_api.js_** e **_index.html_**, o api.js é inserido os dados de requisição e ligação entre o servidor e a API, no HTML é feita a construção do layout para exibição dos dados no frontend.
+ No arquivo api.js temos os comandos de requisição e ligação entre o servidor e a API, no HTML é feita a construção do layout para exibição dos dados no frontend.
 
 No código a seguir, a biblioteca express é utilizada para fazer a requisição da porta 3005, e solicita a resposta ao servidor para que o projeto possa ser apresentado na saída da porta.
 
@@ -59,7 +61,7 @@ No código a seguir, a biblioteca express é utilizada para fazer a requisição
 
 Nessa estapa do código é realizado o consumo da API, é utilizado a biblioteca _axios_ para fazer a ligação com as informações da API.
 
-Para dar start no servidor é usado o comando **_node <arquivo>.js_**, neste caso _node api.js_. Assim, é realizada a ligação com a porta do servidor e verificada que a requisição está funcionando com a exibição na mensagem "tudo certo" no terminal.
+Para dar start no servidor é usado o comando **_node <arquivo>.js_**, no caso do nosso projeto: _node api.js_. Assim, é realizada a ligação com a porta do servidor e pode ser verificada se a requisição está funcionando com a exibição na mensagem "tudo certo" no terminal após o comando de start do servidor.
 
 ```sh
 {
@@ -79,7 +81,7 @@ Para dar start no servidor é usado o comando **_node <arquivo>.js_**, neste cas
 
 ### Informações da API 
 
-As informações que estão sendo requisitadas na API podem ser visualizadas abaixo.
+As informações que estão sendo requisitadas na API podem ser visualizadas abaixo. São dados sobre cotações, valor de alta e baixa de cada moeda em realação ao Real Brasileiro.
 
 ```sh
 {
@@ -129,7 +131,7 @@ As informações que estão sendo requisitadas na API podem ser visualizadas aba
 
 ### Exibindo no HTML
 
-No arquivo HTML, utilizando a biblioteca fetch e fazendo uso da estrutura de repetição FOR, o programa percorre os dados e exibe na tela da página as informações solicitadas, neste caso o nome da moeda e o valor converdito para reais.
+No arquivo HTML, utilizando a biblioteca **_fetch_** e fazendo uso da estrutura de repetição _FOR_, o programa percorre os dados e exibe na tela da página as informações solicitadas, neste caso o nome da moeda e o valor converdito para reais.
 
 ```sh
 {
@@ -144,10 +146,11 @@ No arquivo HTML, utilizando a biblioteca fetch e fazendo uso da estrutura de rep
                 })()
     </script>
 }
+```
 
 
-Na imagem a seguir é apresentado a página em que os dados são exibidos:
+Na imagem a seguir é apresentada a página em que os dados são exibidos:
 
-![imagem](API.jpg)
+![API](https://user-images.githubusercontent.com/103959633/208310594-2160dceb-6c0a-445c-8eb5-5f2d7fd17f74.jpg)
 
-A página pode ser exibida tanto utilizando o arquivo _index.html_ ou pelo endereço _localhost:3005_
+A página pode ser exibida tanto utilizando o arquivo **_index.html_** ou pelo endereço **_localhost:3005_**
