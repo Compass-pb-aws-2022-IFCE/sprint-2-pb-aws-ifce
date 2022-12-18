@@ -1,6 +1,6 @@
 
 # Avaliação - Sprint 2
-Nesse projeto foi criado uma aplicação simples que realiza requisições para a API pública da [Riot Games]([https://developer.riotgames.com), onde é possível  pesquisar por usuários do jogo [League of Legends](https://www.leagueoflegends.com/pt-br/). São retornadas as informações do nível do usuário, seu "rank" em um modo de jogo e quantidade de vitórias e derrotas totais em partidas nesse modo de jogo.
+Nesse projeto foi criado uma aplicação simples que realiza requisições para a API pública da [Riot Games](https://developer.riotgames.com), onde é possível  pesquisar por usuários do jogo [League of Legends](https://www.leagueoflegends.com/pt-br/). São retornadas as informações do nível do usuário, seu "rank" em um modo de jogo e quantidade de vitórias e derrotas totais em partidas nesse modo de jogo.
 
 ## Como a API funciona
 API significa interface de programação de aplicação, através dela é possível realizar a comunicação entre plataformas seguindo certas normas e padrões, onde pode haver o compartilhamento e/ou manipulação de dados através da API. 
