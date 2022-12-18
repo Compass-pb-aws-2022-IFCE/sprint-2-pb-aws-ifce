@@ -22,7 +22,7 @@ app.get('/MortySmith', async(req, res) => {
    res.end();
 })
 
-app.get(app.get('/RickSanchez', async(req, res) => {
+app.get('/RickSanchez', async(req, res) => {
     const {data} = await axios("https://rickandmortyapi.com/api/character/1")
     res.write(`
     <div> Nome: ${data.name} </div>
@@ -32,9 +32,9 @@ app.get(app.get('/RickSanchez', async(req, res) => {
     <img src= ${data.image}></img>`)
     console.log(data)
     res.end();
- }))
+ })
 
-app.get(app.get('/SummerSmith', async(req, res) => {
+app.get('/SummerSmith', async(req, res) => {
     const {data} = await axios("https://rickandmortyapi.com/api/character/3")
     res.write(`
     <div> Nome: ${data.name} </div>
@@ -44,9 +44,9 @@ app.get(app.get('/SummerSmith', async(req, res) => {
     <img src= ${data.image}></img>`)
     console.log(data)
     res.end();
- }))
+ })
 
- app.get(app.get('/BethSmith', async(req, res) => {
+ app.get('/BethSmith', async(req, res) => {
     const {data} = await axios("https://rickandmortyapi.com/api/character/4")
     res.write(`
     <div> Nome: ${data.name} </div>
@@ -56,9 +56,9 @@ app.get(app.get('/SummerSmith', async(req, res) => {
     <img src= ${data.image}></img>`)
     console.log(data)
     res.end();
- }))
+ })
 
- app.get(app.get('/JarrySmith', async(req, res) => {
+ app.get('/JarrySmith', async(req, res) => {
    const {data} = await axios("https://rickandmortyapi.com/api/character/5")
    res.write(`
    <div> Nome: ${data.name} </div>
@@ -68,9 +68,9 @@ app.get(app.get('/SummerSmith', async(req, res) => {
    <img src= ${data.image}></img>`)
    console.log(data)
    res.end();
-}))
+})
 
-app.get(app.get('/AbadangoCluster', async(req, res) => {
+app.get('/AbadangoCluster', async(req, res) => {
    const {data} = await axios("https://rickandmortyapi.com/api/character/6")
    res.write(`
    <div> Nome: ${data.name} </div>
@@ -80,9 +80,9 @@ app.get(app.get('/AbadangoCluster', async(req, res) => {
    <img src= ${data.image}></img>`)
    console.log(data)
    res.end();
-}))
+})
 
-app.get(app.get('/All', async(req, res) => {
+app.get('/All', async(req, res) => {
    const {data} = await axios("https://rickandmortyapi.com/api/character")
    data.results.map(function (results){
       res.write(`
@@ -93,4 +93,4 @@ app.get(app.get('/All', async(req, res) => {
       <img src= ${results.image}></img>`)})
    console.log(data)
    res.end();
-}))
+})
