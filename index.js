@@ -19,9 +19,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', async function (req, res) {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + req.body.entrada)
-    const app = await response.json()
-    res.send(`
+    try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + req.body.entrada)
+        const app = await response.json()
+        res.send(`
             <div">
             <p><b>${app.name}</b></p>
             <img
@@ -33,6 +34,9 @@ app.post('/', async function (req, res) {
                 <p>Altura:${app.height}</p>
             </div>
             <a href="/">voltar</a>`)
+    } catch {
+        res.send('<p>Entarada de dados invalida</p> <a href="/">Voltar</a>');
+    }
 });
 
 
