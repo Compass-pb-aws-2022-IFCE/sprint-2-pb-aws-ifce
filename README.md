@@ -168,7 +168,7 @@ app.get('/', (req, res) =>
 
 ## Requisição  na API
 
-Utilizaremos o função post de modo assincrono dentro de nosso estrututa e para fazer a requisição usa-se a URL (Timestamp + chaves+ hash) interpolado com solicitação do usuário (nome do personagem = id referente ao nome de mesma posição nos vetores).
+Utilizaremos o função post de modo assincrono dentro de nosso estrututa e para fazer a requisição usa-se a URL e interpola o timestamp, chave pública e hash, com solicitação do usuário (nome do personagem = id referente ao nome de mesma posição nos vetores).
 
 
 ```
