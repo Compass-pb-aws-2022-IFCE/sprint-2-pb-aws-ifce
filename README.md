@@ -3,15 +3,28 @@
 Avaliação da segunda sprint do programa de bolsas Compass.uol para formação em machine learning para AWS.
 
 
+
+
 Este projeto trata-se da escolha de uma API pública para ser consumida com NODEJS, em uma página HTML simples.
 
-Sobre a API pública e a conclusão da avaliação
 A escolhida foi a  VIA CEP que após a inserção do CEP retorna informações tais como: BAIRRO, RUA, CIDADE, ESTADO E NÚMERO CADASTRADO NO IBJE. 
 
 Tecnologias e linguagens utilizadas:
+
 HTML - JAVASCRIPT – API VIA CEP 
 
+
+1. Inicialmente Clonei o repositório do GIT em minha máquina local através do GIT Bash
+
+![image](https://user-images.githubusercontent.com/46223150/208496135-ae611dce-8468-498c-a319-33ce537b5220.png)
+
+
+git clone https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce.git
+
 1.	CRIAÇÃO DE PÁGINA SIMPLES .HTML
+
+No VsCode criei um arquivo chamado index.html dentro do diratório sprint-2-pb-aws-ifce onde irei construir o conteúdo a ser exibido no site e ficou da seguinte maneira:
+
 
 <html>
   <head>
