@@ -12,7 +12,7 @@ As APIs são um conjunto de padrões que fazem parte de uma interface e que perm
 Para o projeto foi escolhida uma API pública da Marvel, no qual é possível obter vários recursos referentes às suas atribuições. Para o consumo desta API é preciso de um timestamp (uma variável baseada em um horário), uma chave pública e uma chave privada, onde com  esses dados é feito um hash e com isso torna-se possível acessar a API.
 
 
-## INSTALÇÃO DAS DEPENDÊNCIAS 
+## INSTALANDO DEPENDÊNCIAS 
 Deve criar um diretório para armazenar localmente todos os arquivos do projeto e incialndo uma aplicação node que irá uma arquivo packege.json
 ```
 npm init
@@ -85,6 +85,62 @@ TRADUÇÃO
 
 Foi criado dois vetores, um para os " id" e outros para os "nomes dos personogens", de forma que minha primeira requisição nada mais fosse que uma verificação dentro do vetor com os nomes dos personagens: ao passar o nome no meu front, há uma verificação dentro do meu vetor para saber se aquele personagem existe, caso exista a aplicação irá coletar o indice que aquele nome está localizado dentro do vetor "names"e utilizar para o obter o "id"de mesmo indece localizado do vetor "ids",onde esse id será utilizado para realizar a requisição na API atravéns do Axios que retornará as algumas informações do personagem pesquisado. 
 
+
+```
+let ids =[
+    1011334, 1017100, 1009144,
+    1010699, 1009146, 1016823,
+    1009148, 1009149, 1010903,
+    1011266, 1010354, 1010846,
+    1017851, 1012717, 1011297,
+    1011031, 1009150, 1011198,
+    1011175, 1011136
+  ]
+let names = [
+    '3-D Man',
+    'A-Bomb (HAS)',
+    'A.I.M.',
+    'Aaron Stack',
+    'Abomination (Emil Blonsky)',
+    'Abomination (Ultimate)',
+    'Absorbing Man',
+    'Abyss',
+    'Abyss (Age of Apocalypse)',
+    'Adam Destine',
+    'Adam Warlock',
+    'Aegis (Trey Rollins)',
+    'Aero (Aero)',
+    'Agatha Harkness',
+    'Agent Brand',
+    'Agent X (Nijo)',
+    'Agent Zero',
+    'Agents of Atlas',
+    'Aginar',
+    'Air-Walker (Gabriel Lan)'
+  ]
+  
+  
+async function getInfo(entrada){
+    const {data} = await axios(`http://gateway.marvel.com/v1/public/characters?ts=1671379194375&apikey=554e2c6b0707df8474dacb4de774b361&hash=245aa02464e3461e9e8178eaca0734d7`)
+        for (let carac=0;carac <= 19;carac ++){
+            ids.push(data.data.results);
+        };
+    for (let carac=0;carac <= 19;carac ++){
+            ids2.push(ids[carac].id);
+        };
+    console.log(ids2)
+};
+
+
+async function getNames(entrada){
+        for (let carac=0;carac <= 19;carac ++){
+            const {data} = await axios(`http://gateway.marvel.com/v1/public/characters/${ids[carac]}?ts=1671379194375&apikey=554e2c6b0707df8474dacb4de774b361&hash=245aa02464e3461e9e8178eaca0734d7`)
+            names.push(data.data.results[0].name);
+        };
+        console.log(names)
+    
+};
+```
 
 ## HTML para Requisição 
 
