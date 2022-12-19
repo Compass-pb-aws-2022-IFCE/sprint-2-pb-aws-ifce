@@ -40,3 +40,6 @@ npm i axios
 
 Axios é utilizado para realização de requisições, sendo  um cliente HTTP baseado em Promises. 
 
+```
+npm install --save body-parser
+```
