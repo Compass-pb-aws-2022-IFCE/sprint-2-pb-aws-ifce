@@ -84,3 +84,18 @@ A aplicação desenvolvida tem como objetivo consumir API pública da Marvel e e
 TRADUÇÃO 
 
 Foi criado dois vetores, um para os " id" e outros para os "nomes dos personogens", de forma que minha primeira requisição nada mais fosse que uma verificação dentro do vetor com os nomes dos personagens: ao passar o nome no meu front, há uma verificação dentro do meu vetor para saber se aquele personagem existe, caso exista a aplicação irá coletar o indice que aquele nome está localizado dentro do vetor "names"e utilizar para o obter o "id"de mesmo indece localizado do vetor "ids",onde esse id será utilizado para realizar a requisição na API atravéns do Axios que retornará as algumas informações do personagem pesquisado. 
+
+
+## HTML para Requisição 
+
+Criar na nossa pasta um arquivo chamdo index.html que será responsavel por salvar a entrada de dados do usuario e passa-la para a nossa aplicação node, para isso vamos criar um forms, ele recebe dois parametros importantes que nos ajudará na comunicação com nossa aplicação, o primeiro é o action, ele define a rota para qual os dados serão enviados, o segundo parametro define qual metodo HTTP será usado, como queremos enviar dados escolhemos o metodo POST. Dentro do corpo do form vamos passar um Input para o usuario entrar com seus dados e um botão para envio.
+
+
+```
+<form action="\", method="POST">
+    <h1>Busca de Personagem</h1>
+    <input type="teste" name="entrar">
+    <button class="submit">enviar</button>
+   
+</form>
+```
