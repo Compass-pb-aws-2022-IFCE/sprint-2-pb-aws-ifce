@@ -1,0 +1,13 @@
+<div class="container" id="container-view-anime">
+    <div class="img-anime">
+        {{#if anime}}
+        <img id="anime-img" src="{{anime.link_img}}" alt="Anime Imagem">
+        {{/if}}
+    </div>
+    <div class="info-anime">
+        {{#if anime}}
+        <h1>Título: {{anime.nome }}</h1>
+        <h2>Sinopse: {{anime.sinopse}}</h2>
+        {{/if}}
+    </div>
+</div>

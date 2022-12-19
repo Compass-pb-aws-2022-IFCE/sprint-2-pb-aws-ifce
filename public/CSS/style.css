@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Shadows+Into+Light&display=swap");
+
+* {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-family: Nanum Gothic;
+}
+.navbar {
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+  border-left: 25pc;
+  background-color: rgb(179, 218, 205);
+}
+
+.navbar-brand {
+  font-family: Shadows Into Light;
+  font-size: 45px;
+  color: rgb(214, 137, 184);
+}
+
+#top-container {
+    padding: 10px;
+    background-size: cover;
+}
+
+.input-anime-nome {
+  background-color: rgb(237, 235, 232);
+  border: 2px solid #ccc;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+}
+
+.botao-submit {
+    padding: px 10px;
+
+}
+
+.btn {
+    /* color:rgb(214, 137, 184); */
+    background-color: rgb(214, 137, 184);
+    border-radius: 10%;
+}
+
+body {
+  background-color: rgb(237, 235, 232);
+}
+
+#anime-img {
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.info-anime {
+    margin-right: 300px ;
+}

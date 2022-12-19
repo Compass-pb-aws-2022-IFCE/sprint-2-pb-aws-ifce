@@ -1,0 +1,33 @@
+{
+  "name": "sprint-2-pb-aws-ifce",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido em Node.js que tem por objetivo consumir uma API pública.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce.git"
+  },
+  "keywords": [
+    "api",
+    "jikan"
+  ],
+  "author": "Josiana Silva <josiana.silva.pb@compasso.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
