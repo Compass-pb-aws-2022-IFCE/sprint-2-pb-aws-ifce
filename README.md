@@ -13,22 +13,33 @@ Para o projeto foi escolhida uma API pública da Marvel, no qual é possível ob
 
 
 INSTALAÇÃO DAS DEPENDÊNCIAS
+
 Deve-se criar um diretório para armazenar localmente todos os arquivos do projeto e incialndo uma aplicação node que irá um arquivo packege.json
 
+
 npm init
+
 ALÉM DISSO, FAZ-SE NECESSÁRIO A INSTALAÇÃO DE ALGUMAS BIBLIOTECAS:
+
 
 Node express
 
+
 npm install --save express
+
 O Express oferece soluções para: Gerenciar requisições de diferentes verbos HTTP em diferentes URLs.
+
 
 Nodemon
 
 npm install --save nodemon
+
 O Nodemon é uma ferramenta que auxiliar nas alterações que serão realizadas dentro do meu código, reiniciando a aplicação após as mudanças.
+
 
 Axios
 
+
 npm i axios
+
 Axios é utilizado para realização de requisições, sendo um cliente HTTP baseado em Promises.
