@@ -75,6 +75,10 @@ app.get('/', (req, res) => {
 - Template da construção do html.
 ![Captura de Tela (91)](https://user-images.githubusercontent.com/106123150/208344150-2939e0cb-df89-451f-b9a8-1d1cad1464f6.png)
 
+### O arquivo index.handlebars
+- Foi colocado somente o modo button, mais poderia ter acrecentado outros modos.
+![Captura de Tela (95)](https://user-images.githubusercontent.com/106123150/208436770-f521b80b-9b11-4087-8c68-061dadbeeede.png)
+
 ### Imagem da página retornada pelos dados usados.
 ![Captura de Tela (93)](https://user-images.githubusercontent.com/106123150/208344811-17ae4746-527f-4a4a-9446-a83e01420507.png)
 
