@@ -159,7 +159,7 @@ Criar na nossa pasta um arquivo chamdo index.html que será responsavel por salv
 
 ## Comunicação 
 
-Para que a aplicação possa enxergar o que o usuário está solicitando é necessario que haja comunicação entre ambos, para isso tempo: 
+Para que a aplicação possa enxergar o que o usuário está solicitando é necessario que haja comunicação entre ambos, para isso temoS: 
 
 ```
 app.get('/', (req, res) => 
