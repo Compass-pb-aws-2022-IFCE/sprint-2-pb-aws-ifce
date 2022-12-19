@@ -1,20 +1,77 @@
-# Avaliação Sprint 2 - Programa de Bolsas Compass.uol / AWS e IFCE
+  ### Avaliação Sprint 2 - Programa de Bolsas Compass.Uol
+  * #### Objetivo: Aplicar os conhecimentos desenvolvidos durante a Sprint 2
+ #### Tópicos usados:
+ * Api
+ * Javascript
+ * Html
+ 
+ ## Api escolhida: https://viacep.com.br/
+#### Passos realizados:
 
-Avaliação da segunda sprint do programa de bolsas Compass.uol para formação em machine learning para AWS.
+* Instalação do modulo express:
+```
+npm install express
+````
+* Criação do arquivo app.js com os seguinte código:
+```
+function consultaEndereco(){
+    let cep = document.querySelector('#cep').value;
 
----
+    if(cep.length!==8){
+      alert('Cep inválido');
+      return;
+    }
+    
+    let url = `https://viacep.com.br/ws/${cep}/json/`;
 
-## Execução
-- Escolher uma API pública (https://any-api.com/, ou qualquer outra, e **deve ser diferente dos demais colegas**);
-- Consumir essa API através do nodejs (recomendado uso de docker, se possível);
-- Criar uma página html para fazer consultas pela API (pode ser bem simples, o layout não será avaliado).
+    fetch(url).then(function(response){
+      response.json().then(function(data) {
+        console.log (data)
+        mostrarEndereco(data);
+      })
+    });
+}
+function mostrarEndereco(dados){
+  let resultado = document.querySelector('#resultado');
+  
+  if (dados.erro){
+    resultado.innerHTML = "Não foi possível localizar o endereço!";
+  }else{
+    
+  }
 
-## Entrega
-- Aceitar o convite do repositório da sprint-2-pb-aws-ifce;
-- Criar uma branch no repositório com o formato nome-sobrenome (Exemplo: daniel-muller);
-- **Conferir se a API desejada já não foi escolhida por algum colega**;
-- Subir o trabalho na branch com um readme.md, documentando detalhes sobre como a avaliação foi desenvolvida, dificuldades conhecidas e como utilizar o sistema;
-- O prazo de entrega é até às 12h do dia 19/12/2022 no repositório do github (https://github.com/Compass-pb-aws-2022-IFCE/sprint-2-pb-aws-ifce).
+  resultado.innerHTML = `<p>Endereço: ${dados.logradouro} </p> <p> Bairro:${dados.bairro} </p> Cidade:${dados.localidade} <p> Estado:${dados.uf} </p>`
+  }
+  ```
+ *  Criação do arquivo index.html com o seguinte código:
+                          
 
----
----
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>dados</title>
+  <script src="app.js"></script>
+</head>
+
+<body>
+<label>Digite seu cep: (formato 00000000)</label>
+  <br>
+      <input type="number" id="cep"/>
+      <button onclick="consultaEndereco()">Consultar</button>
+      <div id="resultado">
+        <p>Seu endereço aparecerá aqui <p>
+
+
+</body>
+
+ </html>
+```
+Ao abrir o arquivo index.html em seu navegador é possível visualizar uma tela que pode ser inserido seu cep, a api retornará as informações do local caso o cep seja válido.
+
+
+ 
+ 
