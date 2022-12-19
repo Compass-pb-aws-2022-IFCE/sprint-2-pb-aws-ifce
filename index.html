@@ -1,0 +1,32 @@
+<html>
+  <head>
+  <title>Consulta Informações por CEP </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Adicionando Javascript -->
+ 
+  </head>
+
+  <body>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  <h1>Seja bem vindo ao Busca CEP</h1>
+  <p> Insira o CEP que deseja realizar a consulta sem pontos e traços da seguintes maneira: 63010245 </p>    <form method="get" action=".">
+      <label>CEP:
+      <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+             onblur="pesquisacep(this.value);" /></label><br />
+      <label>RUA:
+      <input name="rua" type="text" id="rua" size="60" /></label><br />
+      <label>BAIRRO:
+      <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+      <label>CIDADE:
+      <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+      <label>ESTADO:
+      <input name="uf" type="text" id="uf" size="2" /></label><br />
+      <label>NÚMERO IBGE:
+      <input name="ibge" type="text" id="ibge" size="8" /></label><br />
+    </form>
+  </body>
+
+  </html>
