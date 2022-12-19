@@ -5,7 +5,7 @@
 
  Foi escolhida para ser implementada a __OpenWeather__, um serviço online, de propriedade da OpenWeather Ltd, que fornece dados meteorológicos globais via API, incluindo dados meteorológicos atuais, previsões, previsões e dados meteorológicos históricos para qualquer localização geográfica.
 
-![Logo](src\logo_white_cropped.png)
+![Logo](src/logo_white_cropped.png)
 
 Disponível em: https://openweathermap.org
 
@@ -26,7 +26,7 @@ Disponível em: https://openweathermap.org
 
 * Inicialmente nos registramos no site da [OpenWeather](https://home.openweathermap.org/users/sign_up).
 * Em seguida buscamos nossa [chave](https://home.openweathermap.org/api_keys) para acesso à API. Como segue abaixo:
-![keyAPI](src\keyAPI.png)
+![keyAPI](src/keyAPI.png)
 * Por último acessamos a página com a documentação das chamadas dos dados meteorológicos atuais ([Current Weather Data](https://openweathermap.org/current)).
 * Escolhemos uma chamada para solicitação da API integrada, pelo nome da cidade:
 ```sh
@@ -63,7 +63,8 @@ npm install express, nodemon, body-parser
 </form>
 ```
 * Esse formulário receberá do cliente o nome de uma cidade em seu campo *input*, essa informação será enviada para nossa aplicação através do método *post*. Tendo a seguinte aparência:
-![html](src\html.png)
+
+![html](src/html.png)
 * Quanto a nossa back-end, temos a aplicação **app.js** com o seguinte conteúdo:
 
 ```js
@@ -100,7 +101,8 @@ app.listen(3000, () => console.log("Nosso server está rodando na porta 3000..."
 * Ao acessarmos nosso localhost na porta 3000, iremos para nossa **index.html** onde passaremos uma cidade por formulário.
 * Nossa aplicação então retorna os dados obtidos pela API acerca do clima na cidade definida.
 * Segue exemplo do retorno da aplicação:
-![apiClima](src\apiClima.png)
+
+![apiClima](src/apiClima.png)
 
 ## Autor
 * [@EdivalcoAraujo](https://github.com/EdivalcoAraujo)
