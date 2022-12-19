@@ -155,3 +155,29 @@ Criar na nossa pasta um arquivo chamdo index.html que será responsavel por salv
    
 </form>
 ```
+
+
+## Comunicação 
+
+Para que a aplicação possa enxergar o que o usuário está solicitando é necessario que haja comunicação entre ambos, para isso tempo: 
+
+```
+app.get('/', (req, res) => 
+    res.sendFile(__dirname+'/index.html'));
+```
+
+## Requisição  na API
+
+
+```
+app.post('/', async(req, res) => {
+    let indice = getIndex(names,req.body.entrar)
+    const {data} = await axios(`http://gateway.marvel.com/v1/public/characters/${ids[indice]}?ts=1671379194375&apikey=554e2c6b0707df8474dacb4de774b361&hash=245aa02464e3461e9e8178eaca0734d7`)
+    console.log(data.data.results[0].name)
+    let img = data.data.results[0].thumbnail.path
+    let ext = data.data.results[0].thumbnail.extension
+    res.send(`<p>${data.data.results[0].name}</p>
+    <img src='${img}.${ext}'>
+    <a href="\">Voltar</a>`)
+});
+```
