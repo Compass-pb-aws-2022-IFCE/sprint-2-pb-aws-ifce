@@ -12,34 +12,31 @@ As APIs são um conjunto de padrões que fazem parte de uma interface e que perm
 Para o projeto foi escolhida uma API pública da Marvel, no qual é possível obter vários recursos referentes às suas atribuições. Para o consumo desta API é preciso de um timestamp (uma variável baseada em um horário), uma chave pública e uma chave privada, onde com  esses dados é feito um hash e com isso torna-se possível acessar a API.
 
 
-INSTALAÇÃO DAS DEPENDÊNCIAS
-
-Deve-se criar um diretório para armazenar localmente todos os arquivos do projeto e incialndo uma aplicação node que irá um arquivo packege.json
-
-
+## INSTALÇÃO DAS DEPENDÊNCIAS 
+Deve criar um diretório para armazenar localmente todos os arquivos do projeto e incialndo uma aplicação node que irá uma arquivo packege.json
+```
 npm init
+```
 
 ALÉM DISSO, FAZ-SE NECESSÁRIO A INSTALAÇÃO DE ALGUMAS BIBLIOTECAS:
 
-
-Node express
-
-
+Node expres 
+```
 npm install --save express
-
+```
 O Express oferece soluções para: Gerenciar requisições de diferentes verbos HTTP em diferentes URLs.
 
-
-Nodemon
-
+Nodemon 
+```
 npm install --save nodemon
-
-O Nodemon é uma ferramenta que auxiliar nas alterações que serão realizadas dentro do meu código, reiniciando a aplicação após as mudanças.
-
+```
+O Nodemon é uma ferramenta que auxiliar nas alteração que serão realizadas dentro do meu código, reiniciando a aplicação após mudanças. 
 
 Axios
 
-
+```
 npm i axios
+```
 
-Axios é utilizado para realização de requisições, sendo um cliente HTTP baseado em Promises.
+Axios é utilizado para realização de requisições, sendo  um cliente HTTP baseado em Promises. 
+
