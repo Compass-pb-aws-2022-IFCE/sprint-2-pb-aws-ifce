@@ -68,7 +68,7 @@ EXECUTANDO O CÓDIGO COM NODEMON
 
 ```
 ##  CRIANDO APLICAÇÃO
-Importando Bibliotecas Baixadaw
+Importando Bibliotecas BaixadaS
 ```
 // import and create an express app
 const express = require('express');
