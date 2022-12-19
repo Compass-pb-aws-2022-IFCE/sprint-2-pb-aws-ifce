@@ -13,7 +13,7 @@ Para o projeto foi escolhida uma API pública da Marvel, no qual é possível ob
 
 
 ## INSTALANDO DEPENDÊNCIAS 
-Deve criar um diretório para armazenar localmente todos os arquivos do projeto e incialndo uma aplicação node que irá uma arquivo packege.json
+Deve criar um diretório para armazenar localmente todos os arquivos do projeto e inciar uma aplicação node e um arquivo packege.json
 ```
 npm init
 ```
@@ -68,7 +68,7 @@ EXECUTANDO O CÓDIGO COM NODEMON
 
 ```
 ##  CRIANDO APLICAÇÃO
-Importando Bibliotecas BaixadaS
+Importando Bibliotecas Baixadas
 ```
 // import and create an express app
 const express = require('express');
@@ -79,11 +79,11 @@ const axios = require("axios");
 
 FUNCIONALIDADE DO CÓDIGO 
 
-A aplicação desenvolvida tem como objetivo consumir API pública da Marvel e expressar via requisão axios e comunicação entre back e front-ende alguma informações referente a uma série de personagens. A API da marvel permite requisições através de "id" e daí surge um problema, uma vez que o id dos personagens não são sequências, o que dificulta na busca. Para facilitar a pesquisa foi realizada uma tradução de ID  para o Nomes dos Personagens.
+A aplicação desenvolvida tem como objetivo consumir API pública da Marvel, e expressar via requisão axios e comunicação entre back e front-ende algumas informações referente a uma série de personagens. A API da marvel permite requisições através de "id" e daí surge um problema, uma vez que o id dos personagens não são sequências, o que dificulta na busca. Para facilitar a pesquisa foi realizada uma tradução de Nomes dos Personagens para ID.
 
 TRADUÇÃO 
 
-Foi criado dois vetores, um para os " id" e outros para os "nomes dos personogens", de forma que minha primeira requisição nada mais fosse que uma verificação dentro do vetor com os nomes dos personagens: ao passar o nome no meu front, há uma verificação dentro do meu vetor para saber se aquele personagem existe, caso exista a aplicação irá coletar o indice que aquele nome está localizado dentro do vetor "names"e utilizar para o obter o "id"de mesmo indice localizado do vetor "ids",onde esse id será utilizado para realizar a requisição na API atravéns do Axios que retornará as algumas informações do personagem pesquisado. 
+Foi criado dois vetores, um para os " id" e outros para os "nomes dos personogens", de forma que minha primeira requisição nada mais fosse que uma verificação dentro do vetor com os nomes dos personagens: ao passar o nome no meu front, há uma verificação dentro do meu vetor para saber se aquele personagem existe, caso exista, a aplicação irá coletar o indice (posição) onde aquele nome está localizado dentro do vetor "names"e utilizar para o obter o "id" no mesmo indice(posição) localizado do vetor "ids",onde esse id será utilizado para realizar a requisição na API atravéns do Axios que retornará as algumas informações do personagem pesquisado. 
 
 
 ```
@@ -159,7 +159,7 @@ Criar na nossa pasta um arquivo chamdo index.html que será responsavel por salv
 
 ## Comunicação 
 
-Para que a aplicação possa enxergar o que o usuário está solicitando é necessario que haja comunicação entre ambos, para isso temoS: 
+Para que a aplicação possa enxergar o que o usuário está solicitando é necessario que haja comunicação entre ambos, para isso temos: 
 
 ```
 app.get('/', (req, res) => 
@@ -167,6 +167,8 @@ app.get('/', (req, res) =>
 ```
 
 ## Requisição  na API
+
+Utilizaremos o função post de modo assincrono dentro de nosso estrututa e para fazer a requisição usa-se a URL (Timestamp + chaves+ hash) interpolado com solicitação do usuário (nome do personagem = id referente ao nome de mesma posição nos vetores).
 
 
 ```
