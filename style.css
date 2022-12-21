@@ -1,0 +1,10 @@
+#img-container {
+  height: 60%;
+  width: 60%;
+  object-fit: contain;
+  max-width: 10rem;
+}
+
+#texto-container {
+  padding: auto;
+}
