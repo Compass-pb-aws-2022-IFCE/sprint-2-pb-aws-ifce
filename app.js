@@ -1,30 +1,26 @@
+//importando
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const axios = require("axios")
 
-//criando rota
-const express = require('express');
-const app = express();
-const exphbs=require('express-handlebars');
-const { url } = require('inspector');
-const path=require('path');
-require('dotenv').config();
+//https://www.mercadobitcoin.net/api/BTC/ticker/
 
-
-const PORT = 3000;
-
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.listen(PORT, function(){
-    console.log(`Testando o Express na porta ${PORT}`);
-});
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-    const moedaBTC=req.query.BTC
-    const test=process.env.url
-    console.log(test);
-
-
-
-    res.render("index");
+    res.sendFile(__dirname + '/index.html')
 });
+
+app.post('/', async function (req, res) {
+    const { data } = await axios(`https://www.mercadobitcoin.net/api/${req.body.entrada}/ticker/`)
+    res.send(`<p>A moeda ${req.body.entrada} teve seu valor máximo de: ${data.ticker.high}BRL nas últimas 24hs</p>
+              <p>A moeda ${req.body.entrada} teve seu valor mínimo de: ${data.ticker.low}BRL nas últimas 24hs</p>
+              <a href="/">Voltar</a>`)
+});
+
+
+//criando rota
+app.listen(3000, () => {
+    console.log("A aplicação esta rodando")
+})

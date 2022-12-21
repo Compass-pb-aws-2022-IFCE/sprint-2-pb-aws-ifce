@@ -1,7 +1,7 @@
 {
   "name": "consumindo_api",
   "version": "1.0.0",
-  "description": "Cotação de Moeda",
+  "description": "Criptomoedas",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js"
@@ -10,11 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.2.1",
+    "body-parser": "^1.20.1",
     "express": "^4.18.2",
-    "express-handlebars": "^6.0.6",
     "nodemon": "^2.0.20"
-  },
-  "devDependencies": {
-    "dotenv": "^16.0.3"
   }
 }
